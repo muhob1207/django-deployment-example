@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Users</title>
+        <!-- <link rel="stylesheet" href="{% static "css/mystyle.css" %}"> -->
+    </head>
+    <body>
+        <h1>Please sign up here</h1>
+
+        <form method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="submit">
+        </form>
+
+
+        <!--<h1>Here are your users</h1>
+
+        <ol>
+            {% for acc in access_records %}
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{ acc.first_name }}</li>
+                <li>Last Name: {{ acc.last_name }}</li>
+                <li>Email: {{ acc.email }}</li>
+            </ul>
+            {% endfor %}
+        </ol> -->
+
+        <!-- <h1>Hi this is a picture of Django</h1>
+
+        <h2>Here are your access records:</h2>
+
+        <div class="djangtwo">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+            {% for acc in access_records %}
+            <tr>
+                <td>{{ acc.name }}</td>
+                <td>{{ acc.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No access records</p>
+        {% endif %}
+        </div>
+        <br>
+        <img src="{% static "images/pic.png" %}" alt="Uh oh!"> -->
+
+    </body>
+
+</html>
